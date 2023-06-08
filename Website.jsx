@@ -1,11 +1,15 @@
-import { Container } from 'react-bootstrap';
+import HomeXL from "./home/HomeXL";
+import LandaXL from "./landa/LandaXL";
 
-export default function Website() {
+export default function Website(props) {
+   
   return (
     <>
-    <Container fluid>
-      <h1>Website</h1>
-    </Container>
+    {
+      props.page!="L" 
+        ? <HomeXL />
+        : <LandaXL />
+    }
     </>
   );
 }
