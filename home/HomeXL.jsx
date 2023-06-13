@@ -2,6 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import NavbarHomeMD from "../../tablet/home/NavbarHomeMD";
 import { useState } from "react";
 import WelcomeXL from "./WelcomeXL";
+import Manuale from "../../../assets/components/Manuale";
 
 export default function HomeXL() {
   const [schermata, setSchermata] = useState(2);
@@ -14,7 +15,7 @@ export default function HomeXL() {
       <Row className="mt-2">
         {
           schermata == 0
-            ? null //Manuale
+            ? <Manuale />
             : schermata == 1
               ? null //Regolamento
               : schermata == 3 
